@@ -16,10 +16,9 @@ class Auth extends Controller
 
     //Si il existe une variable POST
     if (!empty($_POST['username']) && !empty($_POST['password'])) {
-      echo 'coucou';
+      //Verifie si l'utilisateur existe
+      //Si oui on créer une session
     }
-    //Verifie si l'utilisateur existe
-    //Si oui on créer une session
 
     //Sinon
     //Envoyer message erreur
