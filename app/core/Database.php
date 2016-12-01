@@ -23,9 +23,11 @@ class Database
 	*	Create Table if not exists
 	* @param array $specs Specifications of the Database
 	**/
-	public function create($specs)
+	public function create($request)
 	{
-		//TODO
+		$prep = self::$db->prepare($request);
+		$res = $prep->execute();
+		return $res;
 	}
 
 	/**
