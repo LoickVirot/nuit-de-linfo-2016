@@ -17,11 +17,16 @@ class Users extends Database
   }
 
 
-  public function isUserExists($usename, $password)
+  public function isUserExists($usename)
   {
     return $this->select("SELECT * FROM members
       WHERE username=$usernamen
       AND password=$password");
+  }
+
+  public function createNewUser($username, $password, $mail, $name, $lastname)
+  {
+    //TODO
   }
 }
  ?>
