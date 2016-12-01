@@ -4,8 +4,8 @@
 **/
 return
 [
-"host" => "127.0.0.1",
-"user" => "root",
+"host" => "localhost",
+"user" => "nuitdelinfo",
 "password" => "dev",
 "database" => "nuitdelinfo",
 "charset" => "utf8"
