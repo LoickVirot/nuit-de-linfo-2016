@@ -1,6 +1,6 @@
 <?php
 /**
-* Auth controller
+* Member controller
 */
 class Member extends Controller
 {
@@ -14,7 +14,7 @@ class Member extends Controller
 	public function index()
 	{
 
-    $this->view('login', []);
+    $this->view('member', []);
 	}
 }
  ?>
