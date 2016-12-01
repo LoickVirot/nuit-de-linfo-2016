@@ -2,7 +2,7 @@
 /**
 * Auth controller
 */
-class Auth extends Controller
+class Member extends Controller
 {
 
 	function __construct()
@@ -13,7 +13,7 @@ class Auth extends Controller
   //Page de login
 	public function index()
 	{
-    
+
     $this->view('login', []);
 	}
 }
