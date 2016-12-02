@@ -13,8 +13,12 @@ class Member extends Controller
   //Page de login
 	public function index()
 	{
-
-    $this->view('member', []);
+    if (!empty($_SESSION)) {
+      $this->view('member', []);
+    }
+    else {
+      header('Location:/')
+    }
 	}
 }
  ?>

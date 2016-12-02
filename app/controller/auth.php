@@ -28,20 +28,34 @@ class Auth extends Controller
 
   // Page d'enregistrement
   public function register() {
-    //Si variable POST
-    if (!empty([$_POST])) {
-			//Verifier les valeurs
-			$values = [];
-			foreach ($_POST as $post) {
-				array_push(addslashes(htmlentities($post)));
-			}
-      $auth = $this->model('Users');
+    //Si variable POST sont ok
+    if (!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['email'])) {
+			$username = addslashes(htmlentities($_POST['username']));
+			$firstname = addslashes(htmlentities($_POST['firstname']));
+			$surname = addslashes(htmlentities($_POST['surname']));
+			$password = addslashes(htmlentities(hash('SHA256', $_POST['password'])));
+			$email = addslashes(htmlentities($_POST['email']));
+			$biography = addslashes(htmlentities($_POST['biography']));
+
+			$auth = $this->model('Users');
       //Verifier si l'utilisateur n'existe pas
-      if (!$auth->isUserExists($values[0])) {
+      if (!$auth->isUserExists($username)) {
         //Enregistre l'utilisateur
-				$auth->createNewUser($values);
+				//$surname, $firstname, $username, $password, $email, $biography, $role
+				try {
+					$res = $auth->createNewUser($surname, $firstname, $username, $password, $email, $biography, 1);
+				} catch (Exception $e) {
+					$this->view('register', ['error' => $e->getMessage()]);
+				}
+				header('Location:/auth');
       }
+			else {
+				$this->view('register', ['error' => 'Il existe deja un compte à ce nom.']);
+			}
     }
+		else {
+			$this->view('register', ['error' => 'Veuillez renseigner tous les champs']);
+		}
 
     $this->view('register', []);
   }

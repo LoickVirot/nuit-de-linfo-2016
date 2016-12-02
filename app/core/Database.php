@@ -25,8 +25,7 @@ class Database
 	**/
 	public function create($request)
 	{
-		$prep = self::$db->prepare($request);
-		$res = $prep->execute();
+		$res = self::$db->query($request);
 		return $res;
 	}
 
