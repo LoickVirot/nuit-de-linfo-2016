@@ -1,3 +1,4 @@
+
 @charset "utf-8";
 /* CSS Document */
 .top-panel {
@@ -13,6 +14,16 @@
     transition: top 400ms cubic-bezier(0.04,0.17,0.03,0.94)
 }
 
+<<<<<<< HEAD
+=======
+footer.main-footer
+{
+  margin-top: 20px;
+  padding: 10px;
+  border-top:2px solid #DDD;
+  
+  }
+>>>>>>> origin/master
 /* Блок сообщения */
 .message {
     color: black;
@@ -53,7 +64,7 @@ label.btn {
 }
 /* Переключатель при наведении */
 label.btn:hover {
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15)
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
 }
 /* Стрелка переключателя вниз */
 label.btn:after {
@@ -112,4 +123,24 @@ input.login{
     body {
         font-size: 120%
     }
+<<<<<<< HEAD
 }
+=======
+} 
+
+
+.blockarticle {
+	border-left: 6px solid red;
+    background-color: lightgrey;
+	padding: 10px;
+	border-radius : 2px;
+	width: 80%;
+	text-align: center;
+}
+
+
+.reponse {
+	text-align : left;
+	display:none;
+}
+>>>>>>> origin/master

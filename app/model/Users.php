@@ -17,16 +17,22 @@ class Users extends Database
   }
 
 
-  public function isUserExists($usename)
+  public function isUserExists($username)
   {
-    return $this->select("SELECT * FROM members
-      WHERE username=$usernamen
-      AND password=$password");
+    $retour = $this->select("SELECT COUNT(*) FROM members WHERE `username` = $username");
+    if ($retour == 1) {
+      return True;
+    }
+    else {
+      return False;
+    }
   }
 
-  public function createNewUser($username, $password, $mail, $name, $lastname)
+  public function createNewUser($surname, $firstname, $username, $password, $email, $biography, $role)
   {
-    //TODO
+    $req = "INSERT INTO `members`(`surname`, `firstname`, `username`, `password`, `email`, `biography`, `role`)
+      VALUES ('$surname', '$firstname', '$username', '$password', '$email', '$biography', '$role');";
+    return $this->create($req);
   }
 }
  ?>
