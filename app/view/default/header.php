@@ -1,10 +1,10 @@
 
-<<<<<<< HEAD
+
 <body>
 <div class="menu"><!-- div exterieur-->
-=======
+
 <div class=""><!-- div exterieur-->
->>>>>>> origin/master
+
 <input class="open" id="top-box" type="checkbox" hidden>
 <label class="btn" for="top-box"></label>
 <div class="top-panel">
