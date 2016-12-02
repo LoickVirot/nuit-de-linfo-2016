@@ -3,7 +3,7 @@
 /* CSS Document */
 .top-panel {
     background: #39464e;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: -250px;
     height: 100%;
@@ -13,6 +13,7 @@
     box-shadow: 5px  0 0 2px   rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     transition: top 400ms cubic-bezier(0.04,0.17,0.03,0.94)
 }
+
 
 <<<<<<< HEAD
 =======
@@ -44,7 +45,7 @@ footer.main-footer
 /* Переключатель панели */
 label.btn {
     display: block;
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0;
     cursor: pointer;
@@ -93,19 +94,22 @@ label.btn:after {
     content: '\f077';
     font: normal 18px/1 FontAwesome
 }
-input.login{
-	border-radius:30px;
-	padding-left:20px;
-	
-}
+
 input.login{
 	border-radius:20px;
 	border-style:inherit;
 	padding-left:20px;
+	margin-left:10px;
 	margin-top:5px;
 	height:40px;
 	font-size:15px;
 	background-color:#ECECEC;
+	
+}
+.logo{
+	width:70%;
+	height:70%;
+	margin-left:30px;
 }
 @media only screen and (max-width: 400px) {
     body {

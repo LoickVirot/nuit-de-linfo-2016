@@ -8,7 +8,8 @@
 <input class="open" id="top-box" type="checkbox" hidden>
 <label class="btn" for="top-box"></label>
 <div class="top-panel">
-   <div class="message">
+   <div class="logindiv">
+   <img class="logo" src="MSF.png">
        <input class="login"  size="22" name="login" placeholder="Pseudo">
        <input class="login" type="password"  size="22" name="password" placeholder="Mot de passe">
    </div>
