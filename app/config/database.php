@@ -5,8 +5,8 @@
 return
 [
 "host" => "localhost",
-"user" => "nuitdelinfo",
-"password" => "dev",
+"user" => "root",
+"password" => "",
 "database" => "nuitdelinfo",
 "charset" => "utf8"
 ];
